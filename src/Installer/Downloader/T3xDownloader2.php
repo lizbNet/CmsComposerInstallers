@@ -29,7 +29,7 @@ class T3xDownloader2 extends ArchiveDownloader implements ChangeReportInterface
     /**
      * {@inheritDoc}
      */
-    private function extract(PackageInterface $package, string $file, string $path): \React\Promise\PromiseInterface
+    protected function extract(PackageInterface $package, string $file, string $path): \React\Promise\PromiseInterface
     {
         return \React\Promise\resolve(T3xDownloaderUtility::extract($package, $file, $path));
     }
